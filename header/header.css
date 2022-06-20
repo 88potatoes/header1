@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.outerHeader {
+    background-color: #101010;
+    width: 100%;
+    height: 80px;
+    display: block;
+}
+
+.innerHeader {
+    width: 1000px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.logoContainer {
+    height: 100%;
+    display: table;
+    float: left;
+}
+
+.logoContainer > h1 {
+    height: 100%;
+    color: white;
+    display: table-cell; 
+    vertical-align: middle;
+    font-family: 'Montserrat', serif;
+    font-size: 32px;
+    font-weight: 100;
+}
+
+.logoContainer > h1 > span {
+    font-weight: 800;
+}
+
+.navigation {
+    float: right;
+    height: 100%;
+}
+
+.navigation li {
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+}
+
+.navigation li a {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: white;
+    font-family: 'Montserrat', serif;
+    font-size: 16px;
+}
+
+.navigation a:last-child {
+    padding-right: 0;
+}
