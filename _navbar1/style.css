@@ -1,0 +1,108 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    min-height: 8vh;
+    background: tomato;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Montserrat", serif;
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+nav {
+    width: 30%;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.burger {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    nav {
+        right: 0px;
+        position: absolute;
+        top: 8vh;
+        width: 40%;
+        background-color: blue;
+        height: 60%;
+
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .nav-links li {
+        right: 0px;
+    }
+}
+
+.burger div {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin: 5px;
+
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navFadeItems {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
