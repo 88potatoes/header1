@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.nav {
+    background: rgb(97, 98, 107);
+    display: block;
+    height: min(8vh, 100px);
+}
+
+.innerHeader {
+    width: 800px;
+    height: 100%;
+    margin: 0 auto;
+
+    display: block;
+}
+
+.logoContainer {
+    height: 100%;
+    float: left;
+    display: table;
+}
+
+.logoContainer > h1 {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    font-family: 'Montserrat', serif;
+    color: rgb(202, 201, 209);
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+}
+
+.navigation {
+    float: right;
+    height: 100%;
+}
+
+.navigation li {
+    height: 100%;
+    display: table;
+    float: left;
+    list-style: none;
+    padding: 0px 20px;
+}
+
+.navigation li a {
+    font-family: 'Montserrat', serif;
+    color: rgb(202, 201, 209);
+    text-decoration: none;
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.navigation li:last-child {
+    padding-right: 0px;
+}
+
+
+.burger div{
+    background-color:tomato;
+    width: 20px;
+    height: 9px;
+    margin: 4px;
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .burger {
+        height: 100%;
+        float: right;
+        display: block;
+    }
+
+    .navigation {
+        display: none;
+        float: none;
+    }
+}

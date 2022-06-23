@@ -1,0 +1,101 @@
+::root {
+    font-size: 16px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar {
+    background-color: tomato;
+    width: 100%;
+    min-height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation li a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Montserrat', serif;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.logo {
+    font-family: 'Montserrat', serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: black;
+}
+
+.burger div {
+    width: 20px;
+    height: 2px;
+    margin: 4px;
+    background-color: black;
+}
+
+.burger {
+    display: none;
+}
+
+/* small screens */
+@media only screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .burger {
+        display: block;
+    }
+
+    .navigation {
+        position: absolute;
+        top: 8vh;
+        flex-direction: column;
+        right: 0;
+        background-color: tomato;
+        width: 50%;
+        height: 92vh;
+
+        transform: translateX(100%);
+        transition: transform 0.4s ease;
+    }
+
+    .navigation li {
+        opacity: 0;
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes textFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
